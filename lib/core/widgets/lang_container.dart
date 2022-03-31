@@ -1,19 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:lesson_x/constants/size_config.dart';
 
-
 class LangContainer extends StatelessWidget {
   final topBorder;
   final bottomBorder;
   final name;
   final flag;
+  
 
   const LangContainer(
       {Key? key,
       this.bottomBorder,
       this.topBorder,
       required this.flag,
-      this.name})
+      this.name, })
       : super(key: key);
 
   @override
@@ -39,9 +39,13 @@ class LangContainer extends StatelessWidget {
           SizedBox(
             width: getWidth(20),
           ),
-          Text(name?? "", style: TextStyle(fontSize: getHeight(18),
-          fontWeight: FontWeight.w500,
-          ),)
+          Text(
+            name ?? "",
+            style: TextStyle(
+              fontSize: getHeight(18),
+              fontWeight: FontWeight.w500,
+            ),
+          )
         ],
       ),
     );

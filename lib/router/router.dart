@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:lesson_x/screens/home_page.dart';
 import 'package:lesson_x/screens/language_page.dart';
+import 'package:lesson_x/screens/onBoarding_page.dart';
+import 'package:lesson_x/screens/sing_up_page.dart';
 
 class MyRouter {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -9,10 +11,20 @@ class MyRouter {
     switch (settings.name) {
       case '/':
         return MaterialPageRoute(
-          builder: (context) => SplashPage(),
+          builder: (context) => const SplashPage(),
         );
       case '/lang':
-        return MaterialPageRoute(builder: (_) => LanguagePage());
+        return MaterialPageRoute(
+          builder: (_) => const LanguagePage(),
+        );
+      case '/-onBoarding':
+        return MaterialPageRoute(
+          builder: (_) => const OnBoardingPage(),
+        );
+      case '/signUp':
+        return MaterialPageRoute(
+          builder: (_) => const SignUpPage(),
+        );
     }
   }
 }

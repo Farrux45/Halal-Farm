@@ -10,7 +10,7 @@ class ContainerButton extends StatelessWidget {
   final onTap;
   final color;
   const ContainerButton(
-      {Key? key, this.name, this.bottom, this.color, this.onTap, this.top})
+      {Key? key, this.name, this.bottom, this.color, this.onTap, this.top, textColor})
       : super(key: key);
 
   @override
