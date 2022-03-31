@@ -1,8 +1,22 @@
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:lesson_x/screens/home_page.dart';
+import 'package:lesson_x/constants/color_const.dart';
+import 'package:lesson_x/router/router.dart';
+import 'package:provider/provider.dart';
 
-void main() {
-  runApp(const MyApp());
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await EasyLocalization.ensureInitialized();
+  runApp(
+  EasyLocalization(
+      supportedLocales: const [Locale("en"), Locale("ru"), Locale("uz")],
+      path: "assets/lang",
+      fallbackLocale: const Locale('uz'),
+      startLocale: const Locale('uz'),
+      child: MyApp(),
+  ),
+      );
 }
 
 class MyApp extends StatelessWidget {
@@ -10,13 +24,19 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    var _forRouter = MyRouter();
+
+    return CupertinoApp(
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.blue,
+      title: 'Halal Farm',
+      localizationsDelegates: context.localizationDelegates,
+      supportedLocales: context.supportedLocales,
+      locale: context.locale,
+      theme: CupertinoThemeData(
+        primaryColor: ConsColors.green,
       ),
-      home: const MyHomePage(),
+      initialRoute: '/lang',
+      onGenerateRoute: _forRouter.onGenerateRoute,
     );
   }
 }
