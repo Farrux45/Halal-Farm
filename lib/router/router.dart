@@ -3,6 +3,7 @@ import 'package:lesson_x/screens/home_page.dart';
 import 'package:lesson_x/screens/language_page.dart';
 import 'package:lesson_x/screens/onBoarding_page.dart';
 import 'package:lesson_x/screens/sing_up_page.dart';
+import 'package:lesson_x/screens/view_folder/view_page.dart';
 
 class MyRouter {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -24,6 +25,10 @@ class MyRouter {
       case '/signUp':
         return MaterialPageRoute(
           builder: (_) => const SignUpPage(),
+        );
+        case '/viewPage':
+        return MaterialPageRoute(
+          builder: (_) => const ViewPage(),
         );
     }
   }

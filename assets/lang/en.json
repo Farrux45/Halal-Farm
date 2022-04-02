@@ -6,5 +6,13 @@
     
     "onBoarding1": "Buy your pet online",
     "onBoarding2": "Feed them on an online controlled farm",
-    "onBoarding3": "We will deliver your pet at any time"
+    "onBoarding3": "We will deliver your pet at any time",
+
+    "title": "Skip",
+
+    "sign_up_title": "Feeding pets online",
+    "sign_up_title_2": "Just like (My Tom Cat). Only real animals. Purpose: To provide the Muslim population with halal meat that they believe in.",
+
+    "button": "Registration",
+    "button_2": "Login to account"
 }

@@ -50,7 +50,7 @@ class _OnBoardingPageState extends State<OnBoardingPage> {
                       fontSize: getHeight(22),
                       fontWeight: FontWeight.w600,
                     ),
-                    maxLines: 2,
+                    
                   ),
                 ),
                 Row(
