@@ -5,6 +5,7 @@ import 'package:lesson_x/constants/size_config.dart';
 import 'package:lesson_x/core/widgets/cntainer_button.dart';
 import 'package:lesson_x/core/widgets/cont_button.dart';
 import 'package:lesson_x/main.dart';
+import 'package:lesson_x/screens/view_folder/registration_page.dart';
 
 class SignUpPage extends StatefulWidget {
   const SignUpPage({Key? key}) : super(key: key);
@@ -42,83 +43,99 @@ class _SignUpPageState extends State<SignUpPage> {
       ),
       body: Column(
         children: [
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(
-                left: getWidth(15.0),
-              ),
-              child: Container(
-                height: getHeight(150.0),
-                width: getWidth(250.0),
-                child: Image(
-                  image: AssetImage(rasm),
-                ),
-              ),
-            ),
-          ),
-          Expanded(
-            child: Padding(
-              padding: EdgeInsets.only(left: getWidth(18.0)),
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: [
-                  Container(
-                    child: Text(
-                      "sign_up_title".tr(),
-                      style: TextStyle(
-                        fontSize: getHeight(28.0),
-                        fontWeight: FontWeight.w700,
-                        color: ConsColors.white,
-                      ),
-                    ),
-                  ),
-                  SizedBox(
-                    height: getHeight(20),
-                  ),
-                  Text(
-                    "sign_up_title_2".tr(),
-                    style: TextStyle(
-                      color: ConsColors.white,
-                      fontSize: getWidth(16),
-                      fontWeight: FontWeight.w400,
-                    ),
-                  ),
-                ],
-              ),
-            ),
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Padding(
-                  padding: EdgeInsets.only(
-                    top: getHeight(70),
-                    bottom: getHeight(15),
-                  ),
-                  child: ContButton(
-                    name: "button".tr(),
-                    color: ConsColors.white,
-                    textColor: ConsColors.black,
-                    onTap: () {
-                      Navigator.pushNamed(context, "/viewPage");
-                    },
-                  ),
-                ),
-               ContainerButton(
-                    name: "button_2".tr(),
-                    color: ConsColors.green,
-                    textColor: ConsColors.white,
-                    onTap: () {
-                      Navigator.pushNamed(context, "/viewPage");
-                    },
-                  ),
-                
-              ],
-            ),
-          ),
+          expanded_1(rasm),
+          expanded_2(),
+          expanded_3(context),
         ],
       ),
     );
+  }
+
+  Expanded expanded_3(BuildContext context) {
+    return Expanded(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Padding(
+                padding: EdgeInsets.only(
+                  top: getHeight(70),
+                  bottom: getHeight(15),
+                ),
+                child: ContButton(
+                  name: "button".tr(),
+                  color: ConsColors.white,
+                  textColor: ConsColors.black,
+                  onTap: () {
+                    Navigator.pushNamed(context, "/viewPage");
+                  },
+                ),
+              ),
+              ContainerButton(
+                name: "button_2".tr(),
+                color: ConsColors.green,
+                textColor: ConsColors.white,
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (_) => const RegistrationPage(),
+                    ),
+                  );
+                },
+              ),
+            ],
+          ),
+        );
+  }
+
+  Expanded expanded_2() {
+    return Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(left: getWidth(18.0)),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Container(
+                  child: Text(
+                    "sign_up_title".tr(),
+                    style: TextStyle(
+                      fontSize: getHeight(28.0),
+                      fontWeight: FontWeight.w700,
+                      color: ConsColors.white,
+                    ),
+                  ),
+                ),
+                SizedBox(
+                  height: getHeight(20),
+                ),
+                Text(
+                  "sign_up_title_2".tr(),
+                  style: TextStyle(
+                    color: ConsColors.white,
+                    fontSize: getWidth(16),
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
+            ),
+          ),
+        );
+  }
+
+  Expanded expanded_1(String rasm) {
+    return Expanded(
+          child: Padding(
+            padding: EdgeInsets.only(
+              left: getWidth(15.0),
+            ),
+            child: Container(
+              height: getHeight(150.0),
+              width: getWidth(250.0),
+              child: Image(
+                image: AssetImage(rasm),
+              ),
+            ),
+          ),
+        );
   }
 }

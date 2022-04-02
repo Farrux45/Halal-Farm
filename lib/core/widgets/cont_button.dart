@@ -32,7 +32,7 @@ class ContButton extends StatelessWidget {
           child: Text(
             name ?? " ",
             style: TextStyle(
-              color: Colors.black,
+              color: Colors.grey.shade400,
               fontSize: getHeight(18),
               fontWeight: FontWeight.w600,
             ),

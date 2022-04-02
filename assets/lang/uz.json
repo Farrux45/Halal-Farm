@@ -13,6 +13,19 @@
     "sign_up_title_2": "Xuddi (My Tom Cat) dagidek. Faqat haqiqiy hayvonlarni. Maqsad: musulmon aholini o'zi ishonadigan halol go'sht bilan ta'minlash.",
 
     "button": "Ro'yhatdan o'tish",
-    "button_2": "Akkauntga kirish"
+    "button_2": "Akkauntga kirish",
+    "button_3": "Ortga",
+
+    "reg_page": "To'liq ism-familiyangiz",
+    "reg_page_2": "Tug'ilgan sanangiz",
+    "reg_page_3": "Telefon raqamingiz",
+    "reg_page_4": "Ijtimoiy tarmoqlar orqali",
+
+    "sms_page_1": "SMS dagi kodni kirirting",
+    "sms_page_2": "Kod ushbu raqamga yuborildi",
+    "sms_page_3": "+ 99897 775-77-86",
+    "sms_page_4": "Kodni qaytadan yuborish",
+    "sms_page_5": "Tasdiqlash"
+    
 
 }

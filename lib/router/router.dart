@@ -3,7 +3,8 @@ import 'package:lesson_x/screens/home_page.dart';
 import 'package:lesson_x/screens/language_page.dart';
 import 'package:lesson_x/screens/onBoarding_page.dart';
 import 'package:lesson_x/screens/sing_up_page.dart';
-import 'package:lesson_x/screens/view_folder/view_page.dart';
+import 'package:lesson_x/screens/view_folder/registration_page.dart';
+import 'package:lesson_x/screens/view_folder/sms_page.dart';
 
 class MyRouter {
   Route? onGenerateRoute(RouteSettings settings) {
@@ -28,7 +29,11 @@ class MyRouter {
         );
         case '/viewPage':
         return MaterialPageRoute(
-          builder: (_) => const ViewPage(),
+          builder: (_) => const RegistrationPage(),
+        );
+        case '/smsPage':
+        return MaterialPageRoute(
+          builder: (_) => const SmsPage(),
         );
     }
   }
