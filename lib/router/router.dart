@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:lesson_x/screens/home%20Page/home_page_2.dart';
+import 'package:lesson_x/screens/home%20Page/my_home_page.dart';
 import 'package:lesson_x/screens/home_page.dart';
 import 'package:lesson_x/screens/language_page.dart';
 import 'package:lesson_x/screens/onBoarding_page.dart';
@@ -34,6 +36,14 @@ class MyRouter {
         case '/smsPage':
         return MaterialPageRoute(
           builder: (_) => const SmsPage(),
+        );
+        case '/myHomePage':
+        return MaterialPageRoute(
+          builder: (_) => const MyHomePage(),
+        );
+        case '/homePage2':
+        return MaterialPageRoute(
+          builder: (_) => const MyHomePage2(),
         );
     }
   }

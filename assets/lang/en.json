@@ -26,6 +26,12 @@
     "sms_page_2": "The code was sent to this number",
     "sms_page_3": "+ 99897 775-77-86",
     "sms_page_4": "Send the code again",
-    "sms_page_5": "Confirmation"
+    "sms_page_5": "Confirmation",
+
+    "home_page": "My animals",
+    "home_page_2": "You don't have animals yet",
+    "home_page_3": "You can buy any animal you want",
+    "home_page_4": "+ Buy an animal"
+
     
 }

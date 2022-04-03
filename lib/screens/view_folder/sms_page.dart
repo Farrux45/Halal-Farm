@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:lesson_x/constants/color_const.dart';
 import 'package:lesson_x/constants/size_config.dart';
 import 'package:lesson_x/core/widgets/cntainer_button.dart';
+import 'package:lesson_x/screens/home%20Page/my_home_page.dart';
 
 class SmsPage extends StatefulWidget {
   const SmsPage({Key? key}) : super(key: key);
@@ -91,14 +92,16 @@ class _SmsPageState extends State<SmsPage> {
               top: getHeight(200),
               bottom: getHeight(15),
               left: getHeight(16.0),
-
             ),
             child: ContainerButton(
               name: "sms_page_5".tr(),
               color: ConsColors.green,
               textColor: ConsColors.white,
               onTap: () {
-                
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (_) => MyHomePage()),
+                    (route) => false);
               },
             ),
           ),

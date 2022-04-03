@@ -25,7 +25,12 @@
     "sms_page_2": "Kod ushbu raqamga yuborildi",
     "sms_page_3": "+ 99897 775-77-86",
     "sms_page_4": "Kodni qaytadan yuborish",
-    "sms_page_5": "Tasdiqlash"
-    
+    "sms_page_5": "Tasdiqlash",
+
+    "home_page": "Mening hayvonlarim",
+    "home_page_2": "Hali hayvonlaringiz yo'q",
+    "home_page_3": "O'zingiz istagan hayvonni sotib olishingiz mumkin",
+    "home_page_4": "+ Hayvon sotib olish"
+
 
 }
