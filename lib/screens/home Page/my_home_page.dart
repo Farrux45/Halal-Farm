@@ -6,6 +6,7 @@ import 'package:flutter/services.dart';
 import 'package:lesson_x/constants/color_const.dart';
 import 'package:lesson_x/constants/size_config.dart';
 import 'package:lesson_x/core/widgets/cntainer_button.dart';
+import 'package:lesson_x/screens/home%20Page/home_page_2.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({Key? key}) : super(key: key);
@@ -77,7 +78,10 @@ class _MyHomePageState extends State<MyHomePage> {
               name: "home_page_4".tr(),
               color: const Color(0xFF058F1A),
               onTap: () {
-                Navigator.pushNamed(context, '/homePage2');
+                Navigator.pushAndRemoveUntil(
+                    context,
+                    MaterialPageRoute(builder: (_) => MyHomePage2()),
+                    (route) => false);
               }),
         ],
       ),

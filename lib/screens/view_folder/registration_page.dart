@@ -1,4 +1,5 @@
 import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:lesson_x/constants/color_const.dart';
 import 'package:lesson_x/constants/size_config.dart';
@@ -14,6 +15,10 @@ class RegistrationPage extends StatefulWidget {
 }
 
 class _ViewPageState extends State<RegistrationPage> {
+  final _key = GlobalKey<FormState>();
+
+  final _controller = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -83,7 +88,8 @@ class _ViewPageState extends State<RegistrationPage> {
                       onTap: () {
                         Navigator.pushAndRemoveUntil(
                             context,
-                            MaterialPageRoute(builder: (context) => const SmsPage()),
+                            MaterialPageRoute(
+                                builder: (context) => const SmsPage()),
                             (route) => false);
                       },
                     ),
@@ -194,6 +200,7 @@ class _ViewPageState extends State<RegistrationPage> {
       ),
       child: Form(
         child: TextFormField(
+          keyboardType: TextInputType.number,
           decoration: InputDecoration(
             labelText: "reg_page_3".tr(),
           ),
@@ -210,10 +217,39 @@ class _ViewPageState extends State<RegistrationPage> {
         right: getWidth(15.0),
       ),
       child: Form(
+        key: _key,
         child: TextFormField(
+          keyboardType: TextInputType.none,
+          controller: _controller,
           decoration: InputDecoration(
             labelText: "reg_page_2".tr(),
           ),
+          onTap: () {
+            showCupertinoModalPopup(
+                context: context,
+                builder: (_) => Container(
+                      height: MediaQuery.of(context).size.height * 0.45,
+                      color: Colors.white,
+                      child: Column(
+                        children: [
+                          Container(
+                            height: MediaQuery.of(context).size.height * 0.35,
+                            child: CupertinoDatePicker(
+                                initialDateTime: DateTime(2022, 1, 1),
+                                onDateTimeChanged: (val) {
+                                  setState(() {});
+                                }),
+                          ),
+
+                          // Close the modal
+                          CupertinoButton(
+                            child: Text('OK'),
+                            onPressed: () => Navigator.of(context).pop(),
+                          )
+                        ],
+                      ),
+                    ));
+          },
         ),
       ),
     );
@@ -228,6 +264,7 @@ class _ViewPageState extends State<RegistrationPage> {
       ),
       child: Form(
         child: TextFormField(
+          
           decoration: InputDecoration(
             labelText: "reg_page".tr(),
           ),

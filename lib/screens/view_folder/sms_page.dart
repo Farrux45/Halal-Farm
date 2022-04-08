@@ -17,10 +17,11 @@ class _SmsPageState extends State<SmsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: true,
       appBar: AppBar(
         backgroundColor: Colors.transparent,
         elevation: 0,
-        title: Icon(
+        title: const Icon(
           Icons.clear,
         ),
         iconTheme: IconThemeData(color: ConsColors.black),
@@ -89,7 +90,7 @@ class _SmsPageState extends State<SmsPage> {
           ),
           Padding(
             padding: EdgeInsets.only(
-              top: getHeight(200),
+              top: getHeight(150),
               bottom: getHeight(15),
               left: getHeight(16.0),
             ),
@@ -100,7 +101,7 @@ class _SmsPageState extends State<SmsPage> {
               onTap: () {
                 Navigator.pushAndRemoveUntil(
                     context,
-                    MaterialPageRoute(builder: (_) => MyHomePage()),
+                    MaterialPageRoute(builder: (_) => const MyHomePage()),
                     (route) => false);
               },
             ),

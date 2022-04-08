@@ -5,6 +5,7 @@ import 'package:lesson_x/constants/color_const.dart';
 import 'package:lesson_x/router/router.dart';
 import 'package:provider/provider.dart';
 
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await EasyLocalization.ensureInitialized();
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       theme: CupertinoThemeData(
         primaryColor: ConsColors.green,
       ),
-      initialRoute: '/lang',
+            initialRoute: '/homePage2',
       onGenerateRoute: _forRouter.onGenerateRoute,
     );
   }
